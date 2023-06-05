@@ -25,7 +25,7 @@ const getUserByPk = catchError(async (req, res) => {
             .status(404)
             .json({ message: `User with ID ${id} not found` });
 
-    return res.status(201).json(user);
+    return res.json(user);
 });
 
 const updateUser = catchError(async (req, res) => {
