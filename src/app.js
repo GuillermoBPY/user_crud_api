@@ -18,7 +18,9 @@ app.use(
 app.use(cors());
 
 app.use('/api/v1', router);
-
+app.all('/*', (req, res) => {
+    return res.send('<h1>You shall not pass!🧙‍♂️🚧</h1>');
+});
 // middlewares después de las rutas
 app.use(errorHandler);
 
